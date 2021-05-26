@@ -4,6 +4,11 @@ $("#black").on("click", () => {
       color: "black"
     });
   });
+
+  chrome.runtime.sendMessage({ btnTxt: $("#date").val() }, function(response) {
+    console.log(response)
+  })
+
 });
 
 $("#red").on("click", () => {
@@ -16,3 +21,14 @@ $("#red").on("click", () => {
     });
   });
 });
+
+setInterval(countdown, 1000);
+function countdown() {
+  chrome.runtime.sendMessage({ btnTxt: $("#date").val() }, function(response) {
+    console.log(response)
+  })
+}
+
+
+
+

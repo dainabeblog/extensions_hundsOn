@@ -1,7 +1,10 @@
 {
-  "name": "【導入】content_scripts",
   "manifest_version": 2,
+  "author": "dainabe",
+	"homepage_url": "http://example.com",
   "version": "1.0",
+  "name": "【導入】content_scripts",
+  "description": "何で導入できないん？？",
   "browser_action": {
     "default_title": "BaclkgroundColor"
   },
@@ -12,5 +15,8 @@
       "css": ["content_scripts.css"],
       "js": ["jquery.min.js", "content_scripts.js"]
     }
-  ]
+  ],
+  "background": {
+		"scripts": ["background.js"]
+	}
 }
